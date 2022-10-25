@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: #242428;
+    font-family: 'Hubballi', cursive;
+    font-size: 1.3rem;
+}
+
+#main{
+    width: 100vw;
+    height: 11vh;
+    display: flex;
+}
+
+#one{
+    /* background-color: red; */
+    padding-top: 35px;
+    width: 100px;
+    
+    
+}
+
+#two{ 
+    font-size: 2.9rem;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+#two a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#three{
+    /* background-color: green; */
+    margin-left: 1100px;
+    width: 400px;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 40px;
+}
+
+
+#login1{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+#log_btn1{
+    width: 150px;
+    height: 50px;
+    background-color: #FFED00;
+    border: 0;
+    border-radius: 15px; 
+    font-size: 1.4rem;
+    font-weight: 500; 
+    font-family: 'Hubballi', cursive;
+    vertical-align: baseline;
+}
+
+#log_btn1:hover{
+    cursor: pointer;
+}
+
+#log_btn1:active{
+    background-color: #e6d400;
+}
+
+.material-symbols-outlined{
+    vertical-align: middle;
+}
+
+
+
+#login2{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+
+}
+
+#log_btn2{
+    width: 150px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 15px; 
+    font-size: 1.4rem;
+    font-weight: 500; 
+    font-family: 'Hubballi', cursive;  
+}
+
+#log_btn2:hover{
+    cursor: pointer;
+}
+
+#log_btn2:active{
+    background-color: #e5e5e5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+img{
+    height: 95px;
+    width: 105px;
+    float: right;
+}
+
+
+#burger {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+    
+    
+}
+
+#burger > div {
+    height: 2px;
+    background-color: #FFED00;
+    transition: 0.5s;
+}
+
+#menyAvPaa {
+    display: none;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+    transition: 0,10s;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
