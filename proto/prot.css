@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --main-font: 'Hubballi', cursive;
+}
+body{
+    /* background-color: grey; */
+    background-color: #242428;
+    font-family: var(--main-font); 
+}
+
+#SiteHeader-navContainer{
+    width: 100vw;
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#SiteHeader-nav{
+    width: 350px;
+    display: flex;
+}
+
+
+#SiteHeader-foldMenu{
+    width: 100px; 
+    padding-top: 35px;
+    
+}
+
+#Logo{
+    height: 95px;
+    width: 105px;
+    float: right;
+}
+
+#SiteHeader-logo{ 
+    font-size: 2.9rem;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+
+}
+
+#SiteHeader-logo > a{
+    text-decoration: none;
+    color: #fff;
+}
+/* Koniec */
+
+
+/* Przyciski od Logowania */
+#SiteHeader-buttons{
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+#SiteHeader-login, #SiteHeader-register{
+    width: 160px;
+    height: 50px;
+    text-align: center;
+}
+
+#loginButton, #registerButton{
+    width: 160px;
+    height: 50px;
+    border: 0;
+    border-radius: 15px; 
+    font-size: 1.5rem;
+    font-weight: 500; 
+    font-family: var(--main-font) 
+}
+
+#loginButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFED00;
+}
+
+#registerButton{
+    background-color: #FFFFFF;
+}
+
+#loginButton, #registerButton:hover{
+    cursor: pointer;
+}
+
+#loginButton:active{
+    background-color: #e6d400;
+}
+
+#registerButton:active{
+    background-color: #e5e5e5;
+}
+
+#Site-header-login-icon{
+    color: #242428;
+}
+/* Koniec */
+
+
+/* DROPDOWN */
+/* DROPDOWN */
+/* DROPDOWN */
+
+#SiteHeader-login:hover #DropDown-login{
+    display: block;
+}
+
+
+#DropDown-login{
+    display: none;
+    background-color: #424446;
+    margin-top: 20px;
+    width: 340px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+#DropDown-loginBtn{
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;  
+}
+
+
+#DropDown-loginBtn::placeholder{
+    text-align: center;
+}
+
+  
+#DropDown-loginMenu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#DropDown-loginMenu::after{
+    position: absolute;
+    content: "";
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #424446;
+    top: -134px;
+    left: 20%;
+    transform: translate(-50%, 0);
+
+}
+
+#DropDown-forgotPassword a{
+    font-size: 1rem;
+    color: #FFED00;
+    text-decoration: none;
+}
+
+#Drop-loginButton{
+    background-color: #FFED00;
+    font-family: var(--main-font);
+    width: 120px;
+    height: 35px;
+    border: 0;
+    border-radius: 10px; 
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DROPDOWN */
+/* DROPDOWN */
+/* DROPDOWN */
+
+
+
+
+
+
+/* background-color: #FFED00; */
+
+#burger {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+      
+}
+
+#burger > div {
+    height: 2px;
+    background-color: #FFED00;
+    transition: 0.5s;
+}
+
+#drop_menu {
+    display: none;
+}
+
+#drop_menu:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#drop_menu:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+    transition: 0,10s;
+}
+#drop_menu:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
