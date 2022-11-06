@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-font: 'Hubballi', cursive;
+}
+
+body{
+    font-family: var(--main-font);
+    background-color: #262428;
+    font-size: 1.3rem;
+}
+
+#RegisterArea{
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Register-form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#SignIn{
+    color: #fff;
+    font-size: 3rem;
+    text-align: left;
+}
+
+.InputField{
+    font-family: var(--main-font);
+    color: rgba(255, 255, 255, 0.9);
+    height: 40px;
+    width: 450px;
+    font-size: 1.5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.InputField::placeholder{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+#SignIn{
+    color: #fff;
+    font-size: 3rem;
+    text-align: left;
+}
+
+#g-recaptcha{
+    font-family: var(--main-font);
+    color: rgba(255, 255, 255, 0.9);
+    height: 40px;
+    width: 450px;
+    font-size: 1.5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#RegisterCheckBox{
+    color: rgba(255, 255, 255, 0.6);
+    width: 450px;
+    font-size: 1.2rem;
+}
+
+#RegisterCheckBox a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#CheckBoxInput{
+    display: inline;
+    width: 18px;
+    height: 18px;
+}
+
+#BtnInput{
+    background-color: #FFED00;
+    width: 450px;
+    height: 50px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#BtnInput:active{
+    background-color: #e6d400;
+}
+
+.RegEx-check{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    display: flex;
+    padding-top: 5px;
+}
