@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --main-font: 'Hubballi', cursive;
+    --main-yellow: #FFED00;
+}
+
+body{
+    font-family: var(--main-font); 
+    background-image: url(Siteaddons/lightMain.jpg);
+    background-image: url(https://wallpaperaccess.com/full/1775592.jpg);
+    backdrop-filter: blur(3px);
+    background-color: #242628;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* HEADER */
+
+
+/* Logo i nazwa */
+header{
+    --text: #f4f4f4;
+    --background: transparent;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+}
+
+.header-scrolled {
+    --text: #242628;
+    --text-inverse: #f4f4f4;
+    --background: #f4f4f4;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  }
+
+#HeaderNav-banner{
+    margin-left: 30px;
+    min-width: 350px;
+    display: flex;
+}
+
+
+#HeaderNav-foldMenu{
+    min-width: 50px; 
+    padding-top: 35px; 
+}
+
+#HeaderNav-logo{ 
+    color: inherit;
+    padding: 10px;
+    min-width: 300px;
+    text-align: center;
+}
+
+
+#HeaderNav-logo img{
+    height: 95px;
+    width: 105px;
+    float: right;
+}
+
+#HeaderNav-logo a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 3.3rem;
+}
+
+
+/* Logo i nazwa */
+
+
+/* Hamburger */
+#check_box{
+    top: 35px;
+    left: 35px;
+    position: absolute;
+}
+
+.hamburger {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+}
+
+.hamburger, .navigation {
+    transition: transform .3s .1s ease-in-out;
+}
+
+.hamburger_box {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger_inner {
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-yellow);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .1s .2s ease-in-out;
+    z-index: 999;
+}
+
+.hamburger_inner::before,
+.hamburger_inner::after {
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-yellow);
+    position: absolute;
+    content: '';
+    left: 0;
+    transition: transform .2s .2s ease-in-out, background-color .2s .2s ease-in-out;
+
+} 
+
+.hamburger_inner::before {
+    top: -15px;
+}
+
+.hamburger_inner::after {
+    top: 15px;
+}
+
+.hamburger--active .hamburger_inner {
+    background-color: transparent;
+}
+
+.hamburger--active .hamburger_inner:before {
+    transform: translateY(15px) rotate(45deg);
+    background-color: #000;
+}
+
+.hamburger--active .hamburger_inner:after {
+    transform: translateY(-15px) rotate(-45deg);
+    background-color: #000;
+}
+
+
+.navigation {
+    height: 100vh;
+    width: 265px;
+    background-color: var(--main-yellow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-265px);
+    z-index: 1;
+}
+
+.navigation--active {
+    transform: translateX(0px);
+}
+
+  
+.navigation_list {
+    list-style: none;
+    margin: 85px 0px 0px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+  
+
+.navigation_item{
+    line-height: 20px;
+    color: #252525;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.navigation_item a{
+    text-decoration: none;
+    color: #252525;
+    font-size: 1.7rem;
+}
+
+.navigation_item a:hover{
+    color: #000;
+}
+/* Hamburger */
+
+
+/* Przyciski od Logowania */
+#HeaderNav-buttons{
+    position: relative;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+#HeaderNav-login, 
+#HeaderNav-register{
+    width: 160px;
+    height: 55px;
+    text-align: center;
+}
+
+#Login-loginBtn,
+#Register-registerBtn{
+    width: 160px;
+    height: 55px;
+    border: 0;
+    border-radius: 20px; 
+    font-size: 1.5rem;
+    font-family: var(--main-font) 
+}
+
+#Login-loginBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-yellow);
+}
+
+#Register-registerBtn{
+    background-color: #FFFFFF;
+}
+
+#Register-registerBtn a{
+    text-decoration: none;
+    color: #000;
+}
+
+#Login-loginBtn, 
+#Register-registerBtn:hover{
+    cursor: pointer;
+}
+
+#Login-loginBtn:active{
+    background-color: #e6d400;
+}
+
+#Register-registerBtn:active{
+    background-color: #e5e5e5;
+}
+
+#Login-loginIcon{
+    color: #242428;
+}
+/* Przyciski od Logowania */
+
+
+/* DropMenu */
+.HeaderNav-dropLogin{
+    display: none;
+    background-color: #424446;
+    margin-top: 20px;
+    min-width: 340px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.DropLogin-loginInput{
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;  
+}
+  
+#DropLogin-after{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#DropLogin-after::after{
+    position: absolute;
+    content: "";
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #424446;
+    top: -144px;
+    left: 20%;
+    transform: translate(-50%, 0);
+
+}
+
+#DropLogin-Password a{
+    font-size: 1rem;
+    color: var(--main-yellow);
+    text-decoration: none;
+}
+
+#DropLogin-loginBtn{
+    background-color: var(--main-yellow);
+    font-family: var(--main-font);
+    width: 130px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px; 
+    font-size: 1.3rem;
+}
+
+.show {
+    display:block;
+}
+
+.DropLogin-loginInput:focus{
+    outline: none;
+}
+
+.DropLogin-loginInput::placeholder{
+    text-align: center;
+}
+
+#DropLogin-loginBtn:hover{
+    cursor: pointer;
+}
+
+#DropLogin-loginBtn:active{
+    background-color: #e6d400;
+}
+/* DropMenu */
+
+
+/* HEADER */
+
+
+/* SECTION */
+
+.formContainer{
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input, .input2{
+    font-family: var(--main-font);
+    min-height: 40px;
+    max-width: 450px;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.input2{
+    max-height: 250px;
+}
+
+.form label{
+    font-size: 1.3rem;
+    color: #f4f4f4
+}
+
+.form p{
+    font-size: 1.8rem;
+    color: #f4f4f4;
+    padding-bottom: 20px;
+}
+
+.RegEx-check{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    display: block;
+    padding-top: 5px;
+}
